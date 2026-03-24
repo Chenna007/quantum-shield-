@@ -66,7 +66,7 @@ export default function ScannerPage() {
         quantum_risk_score: data.risk_score?.toString() || '0',
         risk_level: data.risk_level || 'UNKNOWN',
         recommendations: data.recommendations || [],
-        details: data.details || [],
+        details: (data.details as ScanResult['details']) || [],
       };
 
       clearInterval(interval);

@@ -90,7 +90,7 @@ export const scannerApi = {
 
 // ── Reports ───────────────────────────────────────────────
 export const reportsApi = {
-  list: async (limit = 50) => {
+  list: async (limit = 50, offset = 0) => {
     await delay(600);
     return {
       data: {
